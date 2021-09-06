@@ -54,7 +54,7 @@
                                 <th>No Faktur</th>
                                 <th>Nama Pelanggan</th>
                                 <th>Tanggal</th>
-                                <th>Total</th>
+                                <th>Totally</th>
                             </tr>
                         </thead>
                         <tbody>
