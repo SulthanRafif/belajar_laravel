@@ -1,7 +1,7 @@
 @extends('layout.v_template')
 @section('title','Penjualan')
 @section('content')
-<a href="/penjualan/printpdf" target="_blank" class="btn btn-primary">Print PDF</a>
+<a href="/penjualan/print" target="_blank" class="btn btn-primary">Print To Printer</a>
 <table class="table table-bordered">
     <thead>
         <tr>

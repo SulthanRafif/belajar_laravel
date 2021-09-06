@@ -19,4 +19,11 @@ class PenjualanController extends Controller
         ];
         return view('v_penjualan', $data);
     }
+    public function print()
+    {
+        $data = [
+            'penjualan' => $this->PenjualanModel->allData()
+        ];
+        return view('v_print', $data);
+    }
 }

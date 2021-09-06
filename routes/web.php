@@ -52,5 +52,6 @@ Route::get('/guru/delete/{id_guru}', [GuruController::class, 'delete']);
 
 Route::get('/siswa', [SiswaController::class, 'index']);
 Route::get('/penjualan', [PenjualanController::class, 'index']);
+Route::get('/penjualan/print', [PenjualanController::class, 'print']);
 Route::view('/user', 'v_user');
 Route::get('/home/about/{id}', [HomeController::class, 'about']);
