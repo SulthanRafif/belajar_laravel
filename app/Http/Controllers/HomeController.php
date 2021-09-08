@@ -6,17 +6,23 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-        $data = [
-            'nama_sekolah' => 'SMAN 3 Malang',
-            'alamat' => 'Jl. Kertanegara'
-        ];
-        return view('v_home', $data);
+        $this->middleware('auth');
     }
 
-    public function about($id)
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
     {
-        return 'Ini Halaman About <br>' . $id;
+        return view('home');
     }
 }

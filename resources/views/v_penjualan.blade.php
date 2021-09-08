@@ -2,6 +2,7 @@
 @section('title','Penjualan')
 @section('content')
 <a href="/penjualan/print" target="_blank" class="btn btn-primary">Print To Printer</a>
+<a href="/penjualan/printpdf" target="_blank" class="btn btn-success">Print To PDF</a>
 <table class="table table-bordered">
     <thead>
         <tr>
