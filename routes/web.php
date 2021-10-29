@@ -1,6 +1,5 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GuruController;
@@ -8,19 +7,6 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PelangganController;
-
-
-// Route::get('/', function () {
-//     return view('home');
-// });
-
-// Route::get('/siswa', function ($nama_siswa = 'Sulthan Rafif') {
-//     return view('siswa', ['nama_siswa' => $nama_siswa]);
-// });
-
-// Route::get('/siswa/{nama_siswa?}', function ($nama_siswa) {
-//     return view('siswa', ['nama_siswa' => $nama_siswa]);
-// });
 
 Route::view('/about', 'v_about', [
     'nama' => 'Sulthan Rafif',
@@ -30,23 +16,11 @@ Route::view('/about', 'v_about', [
 Route::view('/guru', 'admin.guru.v_dataguru');
 Route::view('/contact', 'contact');
 
-// ---------------------------------------------------------
-
-// Route::get('/', function () {
-//     return view('v_home');
-// });
-
-// Route::view('/guru', 'v_guru');
-// Route::view('/siswa', 'v_siswa');
-// Route::view('/user', 'v_user');
-
-// ---------------------------------------------------------
-
-Route::get('/', [HomeController::class, 'index']);
 Route::get('/home/about/{id}', [HomeController::class, 'about']);
 
 Auth::routes();
 
+Route::get('/', [HomeController::class, 'index']);
 // hak akses untuk admin
 Route::group(['middleware' => 'admin'], function () {
     // user
